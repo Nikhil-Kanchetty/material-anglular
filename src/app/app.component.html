@@ -1,0 +1,757 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div> -->
+<!-- button can have two directives mat-raised-button, mat-button -->
+<!-- <button mat-raised-button>Click here</button> -->
+
+<!-- <br><br> -->
+
+<!-- -----------------------------------------------------------------------------------------------------------Typography classes> -->
+<!-- below classes are used to display text in various sizes -->
+
+<!-- 
+<div class="mat-display-4">This is text</div>
+<div class="mat-display-3">This is text</div>
+<div class="mat-display-2">This is text</div>
+<div class="mat-display-1">This is text</div> 
+-->
+
+<!-- these classes are used instead of h1 to h4 respectively -->
+
+<!-- 
+<div class="mat-headline"><b>This is the heading</b></div>
+<div class="mat-title"><b>This is the heading</b></div>
+<div class="mat-subheading-2"><b>This is the heading</b></div>
+<div class="mat-subheading-1"><b>This is the heading</b></div> 
+-->
+
+<!-- alternate way to do the same as above is to use the typography class -->
+
+<!-- 
+<div class="typography">
+  <h1>This is h1 resembling mat-headline class</h1>
+  <h2>This is h2 resembling mat-title</h2>
+  <h3>This is h3 resembling mat-subheading-2 class</h3>
+  <h4>This is h4 resembling mat-subheading-1 class</h4>
+</div> 
+-->
+
+<!-- for body content and text use the following -->
+
+<!-- 
+<div class="mat-body-1">This is body text</div>
+<div class="mat-body-2">This is the bold text</div>
+<div class="mat-caption">This is for caption</div> 
+-->
+
+<!-- ------------------------------------------------------------------------------------------------------button classes> -->
+
+<!-- 
+<div>
+  <h1>Angular material button and colors</h1>
+</div> 
+-->
+
+<!-- Normal buttons variants -->
+<!-- 
+<div>
+  <button mat-button>Click Me</button>
+  <button mat-raised-button>Click Me</button>
+  <button mat-flat-button>Click Me</button>
+  <button mat-stroked-button>Click Me</button>
+</div> 
+-->
+
+<!-- this is for circular buttons -->
+<!-- 
+<div>
+  <button mat-icon-button>Click Me</button>
+  <button mat-fab>Click Me</button>
+  <button mat-mini-fab>Click</button>
+</div> 
+-->
+
+<!-- there are three kinds of colors material uses they are primary, accent, warn -->
+<!-- we can even try different kinds of buttons for different effects -->
+<!-- 
+<div>
+  <button color="primary" mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>Accent</button>
+  <button color="warn" mat-raised-button>Warn</button>
+<br>
+  <button color="primary" mat-button>Primary</button>
+  <button color="accent" mat-button>Accent</button>
+  <button color="warn" mat-button>Warn</button>
+<br>
+  <button color="primary" mat-flat-button>Primary</button>
+  <button color="accent" mat-flat-button>Accent</button>
+  <button color="warn" mat-flat-button>Warn</button>
+  <br>
+  <button color="primary" mat-stroked-button>Primary</button>
+  <button color="accent" mat-stroked-button>Accent</button>
+  <button color="warn" mat-stroked-button>Warn</button>
+</div> -->
+
+<!-- to disable ripple animation effect for a button -->
+<!-- <p>This button does not have a ripple effect</p>
+<button mat-raised-button color="warn" disableRipple>Click Me</button> -->
+
+
+<!-- --------------------------------------------------------------------------------------------------------button toggles>  -->
+<!-- Here #variableName is used to have a template reference variable for accessing the buttons  -->
+
+<!-- <div class="toggle-button">
+  <mat-button-toggle #toggleBtn class="item">Click Me</mat-button-toggle>
+  {{toggleBtn.checked}}
+  <br>
+  <mat-button-toggle #toggleBtn1 disableRipple class="item">Click Me</mat-button-toggle>
+  {{toggleBtn1.checked}}
+  <br>
+  <mat-button-toggle #toggleBtnC checked class="item">Click Me</mat-button-toggle>
+  {{toggleBtnC.checked}}
+  <br>
+  <mat-button-toggle #toggleBtnD disabled class="item">Click Me</mat-button-toggle>
+  {{toggleBtnD.checked}}
+  <br>
+</div> -->
+
+<!-- This follwing code will let you to select one button out of all  -->
+<!-- <div>
+  <mat-button-toggle-group #toggleButtonGroup="matButtonToggleGroup">
+    <mat-button-toggle value="angular">angular</mat-button-toggle>
+    <mat-button-toggle value="react">react</mat-button-toggle>
+    <mat-button-toggle value="vue">vue</mat-button-toggle>
+    <mat-button-toggle value="reactNative">reactNative</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{toggleButtonGroup.value}}
+</div> -->
+
+<!-- To select multiple buttons use multiple directive in the code like below -->
+<!-- <div>
+    <mat-button-toggle-group #toggleButtonGroupOne="matButtonToggleGroup" multiple>
+      <mat-button-toggle value="angular">angular</mat-button-toggle>
+      <mat-button-toggle value="react">react</mat-button-toggle>
+      <mat-button-toggle value="vue">vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleButtonGroupOne.value}}
+  </div> -->
+
+<!------------------------------------------------------------------------------------------------ Using material icons in the app> -->
+
+<!-- First you need to include a link in index file 
+1. include the link ("https://fonts.googleapis.com/icon?family=Material+Icons") in the index file of the angular applcation
+2. Import the MatIconModule from angualr material
+3. use material.io/tools/icons and find the needed icon
+4. Goto material docs to see more on using svg's.
+ -->
+<!-- 
+ <div>
+    This is a mat icons <mat-icon>face,grade,flight_land</mat-icon>
+ </div> -->
+
+ <!-- ----------------------------------------------------------------------------------------------------badges> -->
+<!-- 
+  1. import batch module from matBatchModule
+ -->
+
+<!-- <div class="badgeFromMat">
+  <span matBadge="5">Notifications</span>
+</div> -->
+<!-- to customize the position -->
+<!-- <div class="badgeFromMat">
+    <span matBadge="5" matBadgePosition="above before">Notifications</span>
+</div> -->
+<!-- to customize the sizes -> medium(default), small, large -->
+<!-- <div class="badgeFromMat">
+    <span matBadge="5" matBadgePosition="below before" matBadgeSize="small">Notifications</span>
+</div> -->
+<!-- to customize color -> primary, accent, warn -->
+<!-- <div class="badgeFromMat">
+    <span matBadge="5" matBadgePosition="below after" matBadgeSize="large" matBadgeColor="primary">Notifications</span>
+</div> -->
+<!-- to stop the badge from overlapping the text use matBadgeOverlap -->
+<!-- <div class="badgeFromMat">
+    <span matBadge="5" matBadgePosition="below after" matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
+</div> -->
+
+<!-- to dynamically bind the badge using a condition -->
+<!-- <div class="badgeFromMat">
+  <span [matBadge]="notifications" [matBadgeHidden]="notifications===0">Notifications</span>
+</div> -->
+
+
+<!-- ----------------------------------------------------------------------------------------------------------------Progress Spinner> -->
+<!-- 1. import matProgressSpinner
+    2. two types mat-progress-spinner and mat-spinner -->
+<!-- 
+<div>
+  <mat-progress-spinner value="70"></mat-progress-spinner>
+</div> -->
+
+<!-- for a continuous spinner -->
+<!-- <div>
+  <mat-spinner color="warn"></mat-spinner>
+</div> -->
+
+<!-- there is also a progress bar indicator -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------Navbar> -->
+
+<!-- 1. import matToolbarModule -->
+<!-- <div>
+  <mat-toolbar color="primary">
+    <span>Tool bar</span>
+  </mat-toolbar>
+</div> -->
+
+<!-- to create a navbar in mat use the following -->
+<!-- <div>
+  <mat-toolbar color="primary" class="navbar">
+
+    <div>Tool bar</div>
+
+    <div class="navlist">
+      <span>Home</span>
+      <span>Services</span>
+      <span>Contact us</span>
+    </div>
+  </mat-toolbar>
+</div> -->
+
+  <!-- -------------------------------------------------------------------------------------------------------------------------Sidenav component -->
+
+<!-- <mat-sidenav-container> -->
+  <!-- side nav can have 3 modes called push, side and over. over is the default one. to test add mode attribute like below -->
+  <!-- <mat-sidenav (opened)="log('opened')" (closed)="log('closed')" [(opened)]="sideNavOpen" mode="side" #sidenav>Side Nav</mat-sidenav> -->
+  <!-- <mat-sidenav-content>Main Content -->
+    <!-- method one -->
+    <!-- <button (click)="sideNavToggle()" mat-raised-button disableRipple>Click me</button> -->
+
+    <!-- method two -->
+    <!-- <button (click)="sideNavOpen=!sideNavOpen"  mat-raised-button disableRipple>Toggle button</button> -->
+
+    <!-- method three -->
+    <!-- To follow the below method have a template reference variable Here i will use #sidenav as a ref -->
+    <!-- <button (click)="sidenav.open()" mat-raised-button disableRipple>Open</button>
+    <button (click)="sidenav.close()" mat-raised-button disableRipple>close</button> -->
+
+    <!-- to listen to side nav use opened and closed events of the sidenav
+    1. have (opened), (closed) event listeners in the mat-sidenav and call the function that are needed to be called    
+    -->
+<!-- 
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------Menues -->
+<!-- we need to use matMenu for creating a menu and use a button or event to trigger the menu -->
+<!-- <mat-menu #appMenu="matMenu">
+  <button id="button1" mat-menu-item [matMenuTriggerFor]="subMenu">one</button>
+  <button id="button2" mat-menu-item>two</button>
+</mat-menu>
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Events</button>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu> -->
+
+<!-- <mat-menu #listItems="matMenu">
+  <ng-template matMenuContent let-name="name" let-fullName="fullName">
+    <button mat-menu-item>Item one</button>
+    <button mat-menu-item>Item two {{fullName}}</button>
+    <button mat-menu-item>Item two {{name}}</button>
+  </ng-template>
+</mat-menu>
+
+<button mat-raised-button [matMenuTriggerData]="{name:'ListOne', fullName:'Kanchetty'}" [matMenuTriggerFor]="listItems" disableRipple>List one</button>
+<button mat-raised-button [matMenuTriggerData]="{name:'ListTwo', fullName:'Kanchetty'}" [matMenuTriggerFor]="listItems" disableRipple>List two</button>
+ -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------List component -->
+<!-- Dense is used to reduce font size if there is too much text -->
+<!-- <mat-list dense>
+  <mat-list-item>Item one</mat-list-item>
+  <mat-list-item>Item two</mat-list-item>
+  <mat-list-item>Item three</mat-list-item>
+</mat-list> -->
+
+<!-- To create a vertical navbar components use the following code, Good place is to use it in side nav component learned earlier -->
+<!-- <mat-nav-list>
+  <a mat-list-item href="#" disableRipple>Home</a>
+  <a mat-list-item href="#">About</a>
+  <a mat-list-item href="#">News</a>
+</mat-nav-list> -->
+
+<!-- To create a multiline lists use code -->
+<!-- to use divider line you have to import mat divider module from angular -->
+<!-- <mat-list>
+  <mat-list-item>
+    <mat-icon mat-list-icon>home</mat-icon>
+    <h3 matLine>Home</h3>
+    <p matLine>This is a description</p>
+  </mat-list-item> -->
+  <!-- the below line creates a divider line between the list items, needs to be imported from the mat divider module -->
+  <!-- <mat-divider></mat-divider> -->
+
+  <!-- <mat-list-item>
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <h3 matLine>Directory</h3>
+    <p matLine>This is a description</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    <mat-icon mat-list-icon>home</mat-icon>
+    <h3 matLine>Home</h3>
+    <p matLine>This is a description</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+ -->
+
+<!-- To create a grid style in mat use the code  -->
+<!-- to adjust the height of the row use rowHeight attribute and by default it is eqaul to col width -->
+<!-- we can use row span and col span for the tiles to occupy multiple rows ro columns respectively -->
+<!-- row height can be given in ratio like '2:1' or 'fit'(for this you need to define the height of the container using height in css of container) -->
+<!-- gutterSize is the attribute used for creating the required space between the tiles of the grid -->
+
+<!-- <mat-grid-list cols='2' rowHeight='fit' style="height: 1000px;" gutterSize="10px">
+<mat-grid-tile>Tile one</mat-grid-tile>
+<mat-grid-tile>Tile two</mat-grid-tile>
+<mat-grid-tile>Tile three</mat-grid-tile>
+<mat-grid-tile>Tile four</mat-grid-tile>
+<mat-grid-tile colspan='2'>Tile five</mat-grid-tile>
+<mat-grid-tile rowspan='2'>Tile six</mat-grid-tile>
+<mat-grid-tile>Tile seven</mat-grid-tile>
+<mat-grid-tile>Tile eight</mat-grid-tile>
+</mat-grid-list> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------Expansion panels and accordians ( panels that expand to show the content and hide the content on demand)  -->
+<!-- This is only the basic of the expansion panel, it contains header ( displayed upon collapse ), description ( collapsed mode ) and content that is hidden  -->
+<!-- 
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>Title</mat-panel-title>
+    <mat-panel-description>Description</mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>This the content of the panel</p>
+  <mat-action-row>
+    <button mat-flat-button disableRipple>Enrol now</button>
+  </mat-action-row>
+</mat-expansion-panel> -->
+
+<!-- to set multiple panels to an accordian use the following mat-accordian, only dispalys one panel at a time and hides other automatically  -->
+<!-- To intentionally display multiple accordion at once use " multi='true' " in the mat-accordion template -->
+<!-- To hide the toggle arrow on the panel use hideToggle in accordion -->
+
+<!-- <mat-accordion multi='true'>
+  <mat-expansion-panel  hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Title</mat-panel-title>
+      <mat-panel-description>Description</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This the content of the panel</p>
+    <mat-action-row>
+      <button mat-flat-button disableRipple>Enrol now</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Title</mat-panel-title>
+      <mat-panel-description>Description</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This the content of the panel</p>
+    <mat-action-row>
+      <button mat-flat-button disableRipple>Enrol now</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ cards  -->
+<!-- <mat-card>
+  <mat-card-title>Title</mat-card-title>
+  <mat-card-content>This is the content of the card</mat-card-content>
+  <mat-card-actions align='end'>
+    <button mat-flat-button>Login</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------- tabs  -->
+<!-- to know the which tab is active at a given time you an use 'selectedIndex' property -->
+<!-- we can even assign the event change to the tab group that will do something when a tab is selected  -->
+<!-- <mat-tab-group style="margin: 10px;" #tabRef (selectedTabChange)="log(tabRef.selectedIndex)">
+  <mat-tab label='angular'>Angular</mat-tab>
+  <mat-tab label='react'>React</mat-tab>
+  <mat-tab label='vue'>Vue</mat-tab>
+</mat-tab-group>
+<p style="margin: 20px;">{{tabRef.selectedIndex}}</p> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- steppers  -->
+ <!-- There are two types of steppers one is horizontal and the other is vertical
+1. supports previous and next buttons out of the box with matStepperPrevious and matStepperNext.
+2. Linear stepper is used to restrict the user to follow a particular steps or order. To do this we need to add linear attribute to the mat-horizontal stepper and also we need to add completed attribute 
+to all the elements in the steps and set it to true or false if it is false the step will not proceed.
+-->
+<!-- <mat-vertical-stepper linear>
+  <mat-step label='order details' completed='true'>
+    <p> order details </p>
+    <div class="buttonSection">
+      <button mat-button disbleRipple matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label='Shipping address' completed='false' optional>
+    <p> Shipping address </p>
+    <div class="buttonSection">
+      <button mat-button disbleRipple matStepperPrevious>Back</button>
+      <button mat-button disbleRipple matStepperNext>Next</button>
+    </div>
+    </mat-step>
+  <mat-step label='billing address' completed='false'>
+      <p> billing address </p>
+      <div class="buttonSection">
+        <button mat-button disbleRipple matStepperPrevious>Back</button>
+        <button mat-button disbleRipple matStepperNext>Next</button>
+      </div>
+  </mat-step>
+  <mat-step label='Finalise shipment' completed='false'>
+      <p>Finalise shipment</p>
+      <div class="buttonSection">
+        <button mat-button disbleRipple matStepperPrevious>Back</button>
+        <button mat-button disbleRipple matStepperNext>Done</button>
+      </div>
+  </mat-step>
+</mat-vertical-stepper>
+
+<mat-horizontal-stepper linear>
+    <mat-step label='order details' completed='true'>
+      <p> order details </p>
+      <div class="buttonSection">
+        <button mat-button disbleRipple matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label='Shipping address' completed='false' optional>
+      <p> Shipping address </p>
+      <div class="buttonSection">
+        <button mat-button disbleRipple matStepperPrevious>Back</button>
+        <button mat-button disbleRipple matStepperNext>Next</button>
+      </div>
+      </mat-step>
+    <mat-step label='billing address' completed='false'>
+        <p> billing address </p>
+        <div class="buttonSection">
+          <button mat-button disbleRipple matStepperPrevious>Back</button>
+          <button mat-button disbleRipple matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label='Finalise shipment' completed='false'>
+        <p>Finalise shipment</p>
+        <div class="buttonSection">
+          <button mat-button disbleRipple matStepperPrevious>Back</button>
+          <button mat-button disbleRipple matStepperNext>Done</button>
+        </div>
+    </mat-step>
+  </mat-horizontal-stepper> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------- Mat input and mat feild component -->
+<!-- matLabel can have three properties they are auto, never and always -->
+<!-- it can also have a attribute called as appearance that defines the styles of the field itself, They are standard, leagacy, fill and ouline -->
+<!-- <mat-form-field style="margin: 10px;" hideReauiredMarker appearance="legacy">
+  <mat-label>Name</mat-label>
+  <input matInput floatLabel="auto" required>
+  <mat-hint align='end'>Max 10 charecters</mat-hint>
+</mat-form-field>
+<br>
+<mat-form-field style="margin: 10px;" hideReauiredMarker appearance="standard">
+  <mat-label>Name</mat-label>
+  <input matInput floatLabel="auto" required>
+  <mat-hint align='end'>Max 10 charecters</mat-hint>
+</mat-form-field>
+<br>
+<mat-form-field style="margin: 10px;" hideReauiredMarker appearance="fill">
+  <mat-label>Name</mat-label>
+  <input matInput floatLabel="auto" required>
+  <mat-hint align='end'>Max 10 charecters</mat-hint>
+</mat-form-field>
+<br>
+<mat-form-field style="margin: 10px;" hideReauiredMarker appearance="outline">
+  <mat-label>Name</mat-label>
+  <input matInput floatLabel="auto" required>
+  <mat-hint align='end'>Max 10 charecters</mat-hint>
+</mat-form-field> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ select  -->
+<!-- To group togather a set of options in the list use mat-optgroup  -->
+<!-- use multiple options for selection multiple ooptons at once -->
+<!-- <mat-form-field style="margin: 10px;">
+  <mat-label>Topic</mat-label>
+ <mat-select [(value)]="slectedValue">  --><!-- multiple -->
+    <!-- <mat-option>None</mat-option>
+    <mat-optgroup label="web">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+        <mat-option value="others">Others</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="mobile">
+        <mat-option value="Ionic">Ionic</mat-option>
+        <mat-option value="react native">React native</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+        <mat-option value="others">Others</mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+<p style="margin: 10px;">{{slectedValue}}</p> -->
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------- Autocomplete  -->
+
+<!-- <form style="margin: 10px;">
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto" />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]='option'>{{option}}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <br>
+  <mat-form-field> 
+    <input type="text" matInput [matAutocomplete]="one" />
+    <mat-autocomplete #one="matAutocomplete" [displayWith]="display">
+      <mat-option *ngFor="let optionobj of optionsObject" [value]='optionobj'>{{optionobj.name}}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form> -->
+
+<!-- to have a filtered auto complete we have use reactive angular forms -->
+
+<!-- watch this part after learning angular reactive forms, channel codevoulution tutoiral no 21 -->
+
+<!-- Creating the chekboxes and radio buttons -->
+<!-- <mat-checkbox labelPosition="before" color="primary" disableRipple>button</mat-checkbox><br>
+<mat-checkbox>button</mat-checkbox><br>
+<mat-checkbox labelPosition="before" color="warn" disableRipple>button</mat-checkbox><br> -->
+
+<!-- There are two kinds of having a radio button, using a radiogroup and individial -->
+<!-- <mat-radio-group>
+  <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+  <mat-radio-button value="react" color="accent">React</mat-radio-button>
+  <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
+</mat-radio-group> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------- Date picker element in material -->
+
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]='datePicker'>
+  <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+  <mat-datepicker #datePicker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- To change the properties of the component use startView having Month, year, multi-year
+1.  Can also set the min and max range of the calender -->
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="datePicker">
+    <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+    <mat-datepicker #datePicker startView="multi-year"></mat-datepicker>
+  </mat-form-field> -->
+
+<!-- To create a filter or restict the date -->
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="datePicker" [min]="minDate" [max]="maxDate">
+  <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+  <mat-datepicker #datePicker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- To resricts the days of the week -->
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="datePicker" [matDatepickerFilter]="dateFilter">
+  <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+  <mat-datepicker #datePicker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------Tool tips  -->
+
+<!-- <button 
+mat-raised-button 
+disableRipple 
+matTooltip="welcome to tool"
+matTooltipPosition="before"
+matTooltipShowDelay="600"
+>
+Hello
+</button> -->
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------snackbars -->
+
+<!-- <button 
+mat-raised-button 
+(click)="openSnack('Item deleted !', 'dismiss')" 
+disabledRipple
+>Show snack bar
+</button>
+ -->
+
+ <!-- To create a custom snackbar watch the video of angular material vidoe no 25 from codevolution -->
+
+ <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------Diaog -->
+<!-- To create a dialog use a button to trigger it  -->
+<!-- created a custom component to display the custom content, created a component called dialog example -->
+<!-- <button mat-raised-button (click)="openDialog()">Dialog</button> -->
+
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Creating the data table  -->
+<!-- simple data table -->
+<!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="weight">
+    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="symbol">
+    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table> -->
+
+
+<!-- data table with filter -->
+
+<!-- To create a mat table with fileter follow the steps:
+1. Create a instance of the table in the class.
+2. Create a input field for the user to enter the value.
+3. Assign the input field with the function that filters the results using buit in filter method -->
+<!-- <mat-form-field>
+  <input (keyup)="applyFilter($event.target.value)" matInput placeholder="something">
+</mat-form-field>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+    <!-- Position Column -->
+    <!-- <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container> -->
+  
+    <!-- Name Column -->
+    <!-- <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container> -->
+  
+    <!-- Weight Column -->
+    <!-- <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+   -->
+    <!-- Symbol Column -->
+    <!-- <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------sorting the mat table using the sorting method in angular material -->
+<!-- follow the steps to impliment the sorting 
+1. add the moudule called matsortmoudule in the material module
+2. create the data using the table  and add directives to the mat-table and mat-header-cell components
+3. use view child in the ts modle-->
+
+<!-- <mat-form-field>
+  <input (keyup)="applyFilter($event.target.value)" matInput placeholder="something">
+</mat-form-field> -->
+
+
+<!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort> -->
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="weight">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="symbol">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table> -->
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------using paginator module -->
+ <!-- <mat-form-field>
+  <input (keyup)="applyFilter($event.target.value)" matInput placeholder="something">
+</mat-form-field> -->
+
+<!-- <div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort> -->
+    <!-- Position Column -->
+    <!-- <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Name Column -->
+    <!-- <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Weight Column -->
+    <!-- <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Symbol Column -->
+    <!-- <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container> -->
+
+    <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table> -->
+
+  <!-- <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+</div> -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------virtual scrolling -->
+<!-- used to load huge number of modules or components with out affecting the performence by lazy loading based on screen size -->
+
+<!-- <cdk-virtual-scroll-viewport itemSize="100" class="container">
+    <div *cdkVirtualFor="let num of numbers" class="number">{{ num }}</div>
+</cdk-virtual-scroll-viewport> -->
